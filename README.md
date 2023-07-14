@@ -28,7 +28,8 @@ Log-out (POST)
 ├─ controllers
 │  └─ users.controller.js
 ├─ services
-│  └─ users.sevice.js
+│  ├─ auth.service.js
+│  └─ users.service.js
 ├─ ropositories
 │  └─ users.repository.js
 ├─ middlewares
