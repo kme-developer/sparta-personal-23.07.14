@@ -5,6 +5,7 @@ const { Transaction } = require('sequelize'); // <= transaction
 const bcrypt = require('bcrypt');
 
 class UserRepository {
+  
   // 사용자 생성 (POST)
   createUser = async (email, nickname, password) => {
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -48,6 +49,7 @@ class UserRepository {
     const user = await Users.findOne({ where: { email } });
     return user;
   };
+  
   // 사용자 정보 검색 (GET)
   findUserInfoById = async (userId) => {
     // Repository => ORM(Sequelize)
