@@ -6,6 +6,7 @@ const AuthService = require('../services/auth.service.js');
 class UsersController {
   userService = new UserService();
   authService = new AuthService();
+  
   // POST
   signup = async (req, res) => {
     try {
