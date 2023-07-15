@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 
 class UserService {
   userRepository = new UserRepository();
+  
   // POST
   signup = async (email, nickname, password, confirm) => {
     try {
@@ -46,6 +47,7 @@ class UserService {
       return result;
     }
   };
+  
   // GET
   getUserInfo = async (userId) => {
     try {
@@ -66,6 +68,7 @@ class UserService {
     }
   };
 
+  // PUT
   updateUserInfo = async (userId, password, afterPassword, afterPasswordConfirm, afterNickname, afterUserDesc) => {
     try {
       const result = {
@@ -131,6 +134,7 @@ class UserService {
     }
   };
 
+  // DELETE
   deleteUserInfo = async (userId, password) => {
     try {
       const result = {
