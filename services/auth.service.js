@@ -7,7 +7,8 @@ const jwt = require('jsonwebtoken');
 
 class AuthService {
   userRepository = new UserRepository();
-
+  
+  // POST
   login = async (email, password) => {
     try {
       const result = {
@@ -33,7 +34,8 @@ class AuthService {
       return result;
     }
   };
-
+  
+  // POST
   logout = async (res) => {
     try {
       res.clearCookie('authorization');
