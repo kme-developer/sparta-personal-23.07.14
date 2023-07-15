@@ -28,7 +28,7 @@ class UsersController {
       if (!email || !password) throw new Error('입력되지 않은 값이 존재합니다.');
       // Controller => Service(login)
       const token = await this.authService.login(email, password);
-      res.cookie('authorization', `Bearer ${token}`); //
+      res.cookie('authorization', `Bearer ${token}`);
       return res.status(200).json({ message: 'log-in 되었습니다.' });
     } catch {
       return res.status(500).json({ message: 'Error! => UserController(login)' });
